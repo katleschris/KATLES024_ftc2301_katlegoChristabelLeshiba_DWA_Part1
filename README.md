@@ -1,0 +1,2 @@
+# KATLES024_ftc2301_katlegoChristabelLeshiba_DWA_Part1
+Structuring JavaScript
