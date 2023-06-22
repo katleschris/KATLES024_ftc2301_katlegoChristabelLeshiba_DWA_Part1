@@ -10,6 +10,8 @@ const modeButton = document.querySelector('.mode-button');
 let currentPage = 1;
 let currentBooks = [];
 
+
+
 // This function renders a list of books on the page
 function renderBookList() {
   const screenWidth = window.innerWidth;
@@ -96,9 +98,8 @@ blueButton.addEventListener('click', () => {
   renderBookList();
 })
 
+
 // create book preview
-
-
 
 function createBookPreview(book) {
   // Create preview container
