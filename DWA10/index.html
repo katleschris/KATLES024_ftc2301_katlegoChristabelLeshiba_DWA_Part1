@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tally count</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/dist/shoelace/shoelace.css"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/dist/shoelace/shoelace.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <sl-header class="header">
+      <h1 class="header_title">Tally Count</h1>
+    </sl-header>
+    <sl-aside class="controls">
+      <sl-form>
+        <sl-select label="Display">
+          <sl-menu-item>Single</sl-menu-item>
+          <sl-menu-item>Multiple</sl-menu-item>
+        </sl-select>
+        <sl-select label="Counter">
+          <sl-menu-item>Counter1</sl-menu-item>
+          <sl-menu-item>Counter2</sl-menu-item>
+          <sl-menu-item>Counter3</sl-menu-item>
+        </sl-select>
+        <sl-button>Settings</sl-button>
+      </sl-form>
+    </sl-aside>
+
+    <sl-main>
+      <div class="counter">
+        <span id="number">0</span><br>
+      </div>
+
+      <div class="counter_actions">
+        <sl-button class="counter_button" onclick="decreaseNumber()" id="subtract" counter_button_first>
+          subtract
+        </sl-button>
+        <sl-button class="counter_button" onclick="increaseNumber()" id="add">add</sl-button>
+        <sl-button class="counter_button" onclick="resetNumber()" id="reset" counter_button_first>
+          reset
+        </sl-button>
+      </div>
+    </sl-main>
+
+    <sl-footer class="footer">
+      Inspired by
+      <a class="footer_link" href="https://tallycount.app/">Tally Count</a>.
+      Note that this is merely a student practice project for learning JavaScript.
+    </sl-footer>
+  </body>
+</html>
