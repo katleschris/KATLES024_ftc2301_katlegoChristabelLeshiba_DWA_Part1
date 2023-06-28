@@ -81,12 +81,12 @@ console.log(
         /****************************************************************************************************
          * Question 9.1 - Use forEach to console.log each product name to the console.
          * **************************************************************************************************/
-        products.forEach(product => console.log(product.product)),
+        products.forEach(productObject => console.log(productObject.product)),
 
         /****************************************************************************************************
          * Question 9.2 - Use filter to filter out products that have a name longer than 5 characters.
          * **************************************************************************************************/
-        products.filter(product => product.product.length > 5)
+        products.filter(productObject => productObject.product.length > 5)
         ,
 
         /****************************************************************************************************
@@ -94,8 +94,8 @@ console.log(
          * all products from the array that do not have prices. 
          * After this has been done then use reduce to calculate the combined price of all remaining products.
          * **************************************************************************************************/
-        products.filter(product => product.price !== '' && !isNaN(product.price))
-                .map(product => Number(product.price))
+        products.filter(productObject => productObject.price !== '' && !isNaN(productObject.price))
+                .map(productObject => Number(productObject.price))
                 .reduce((accumulator, price) => accumulator + price, 0)
         ,
 
@@ -103,20 +103,20 @@ console.log(
          * Question 9.4 - Use reduce to concatenate all product names to create the following string: 
          * banana, mango, potato, avocado, coffee and tea.
          * **************************************************************************************************/
-        products.reduce((accumulator, product) => {
-                return accumulator + ', ' + product.product
+        products.reduce((accumulator, productObject) => {
+                return accumulator + productObject.product + ', '
         }, ''),
 
         /****************************************************************************************************
          * Question 9.5 - Use reduce to calculate both the highest and lowest-priced items. 
          * The names should be returned as the following string: Highest: coffee. Lowest: banana.
          * **************************************************************************************************/
-        products.reduce((accumulator, product) => {
-                if (accumulator.highest.price < product.price && typeof product.price == 'number') {
-                        accumulator.highest = product
+        products.reduce((accumulator, productObject) => {
+                if (accumulator.highest.price < Number(productObject.price) && productObject.price !== '' && productObject.price !== ' ' ) {
+                        accumulator.highest = productObject
                 }
-                if (accumulator.lowest.price > product.price && typeof product.price == 'number') {
-                        accumulator.lowest = product
+                if (accumulator.lowest.price > Number(productObject.price) && productObject.price !== '' && productObject.price !== ' ') {
+                        accumulator.lowest = productObject
                 }
                 return accumulator
         }, { highest: { price: 0 }, lowest: { price: Infinity } }),
