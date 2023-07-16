@@ -6,6 +6,7 @@ import RecentlyPlayed from './Pages/RecentlyPlayed'
 import Favorites from './Pages/Favorites'
 import {Route, Routes} from 'react-router-dom'
 import './App.css'
+import LandingPage from './LandingPage'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
       <Navbar/>
       <div className='container'>
         <Routes>
+          <Route path='/LandingPage' element={<LandingPage />} />
           <Route path='/Home' element={<Home />} />
           <Route path='/AllShows' element={<AllShows />} />
           <Route path='/RecentlyPlayed' element={<RecentlyPlayed />} />

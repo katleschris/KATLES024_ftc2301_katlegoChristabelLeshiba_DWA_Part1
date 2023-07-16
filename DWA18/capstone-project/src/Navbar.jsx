@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import { useState } from 'react'
 
 export default class Navbar extends Component {
     
   render() {
     return (
       <nav className='nav'>
-        <Link to='/Home' className='site-tittle'><h2>Site name</h2></Link>
+        <Link to='/LandingPage' className='site-tittle'><h2>Watch</h2></Link>
         <ul>
             <CustomLink to='./Home' className='home'>Home</CustomLink>
             <CustomLink to='./AllShows' className='all-shows'>All Shows</CustomLink>

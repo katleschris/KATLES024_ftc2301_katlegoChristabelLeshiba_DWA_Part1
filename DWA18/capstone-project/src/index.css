@@ -1,3 +1,9 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,200&display=swap');
+
+
+
+
 html, body {
   height: 100%;
   margin: 0;
@@ -56,4 +62,16 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.container {
+  background-image: url('assets/background.jpg');
+  /* background: url(${backgroundImage}) no-repeat center center fixed; */
+  background-size: cover;
+  align-items: center;
+  margin: 0.1rem;
+  padding: 0.1rem;
+  min-height: 100%;
+  display:flex;
+  justify-content: center;
 }
